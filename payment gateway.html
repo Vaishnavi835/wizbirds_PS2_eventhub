@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .payment-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            width: 600px;
+        }
+        .payment-container h2 {
+            text-align: center;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .input-group select, .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .pay-button {
+            width: 100%;
+            padding: 12px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .pay-button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <h2>Payment Details</h2>
+        <div class="input-group">
+            <label>Payment Method</label>
+            <select id="payment-method">
+                <option value="credit-debit">Credit/Debit Card</option>
+                <option value="upi">UPI</option>
+                <option value="net-banking">Net Banking</option>
+            </select>
+        </div>
+        
+        <div id="credit-debit" style="display: none;">
+            <div class="input-group">
+                <label>Cardholder Name</label>
+                <input type="text" placeholder="Enter name">
+            </div>
+            <div class="input-group">
+                <label>Card Number</label>
+                <input type="text" placeholder="1234 5678 9012 3456">
+            </div>
+            <div class="input-group">
+                <label>CVV</label>
+                <input type="text" placeholder="123">
+            </div>
+        </div>
+        <div id="upi" style="display: none;">
+            <div class="input-group">
+                <label>Select UPI Provider</label>
+                <select>
+                    <option>PhonePe</option>
+                    <option>GPay</option>
+                    <option>RazorPay</option>
+                </select>
+            </div>
+        </div>
+        
+        <div id="net-banking" style="display: none;">
+            <div class="input-group">
+                <label>Select Bank</label>
+                <select>
+                    <option>SBI</option>
+                    <option>Kotak</option>
+                    <option>TMB Bank</option>
+                </select>
+            </div>
+        </div>
+        
+        <button class="pay-button">Pay Now</button>
+    </div>
+    
+    <script>
+        document.getElementById('payment-method').addEventListener('change', function() {
+            let method = this.value;
+            document.getElementById('credit-debit').style.display = (method === 'credit-debit') ? 'block' : 'none';
+            document.getElementById('upi').style.display = (method === 'upi') ? 'block' : 'none';
+            document.getElementById('net-banking').style.display = (method === 'net-banking') ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+    font-family: Garamond, serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #2c003e, #000000);
+    color: white;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.title {
+    font-size: 28px;
+    font-family: Garamond, serif;
+}
+
+.btn {
+    background: violet;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: Garamond, serif;
+}
+
+.btn:hover {
+    background: #b300b3;
+}
+
+/* Events Section */
+.suggestions {
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    font-family: Garamond, serif;
+}
+
+.scroll-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.event-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 30%;
+    min-width: 250px;
+    transition: transform 0.3s;
+}
+
+.event-item:hover {
+    transform: scale(1.05);
+}
+
+.event-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    font-family: Garamond, serif;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 5px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}

@@ -1,0 +1,75 @@
+/* General Styles */
+body {
+    font-family: Garamond, serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #2c003e, #000000);
+    color: white;
+    text-align: center;
+}
+
+/* Header */
+header {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.title {
+    font-size: 28px;
+    font-family: Garamond, serif;
+}
+
+/* Show Details */
+.show-details {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.show-poster {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* Ticket Price */
+.ticket-price {
+    margin: 20px auto;
+}
+
+.price-box {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 40px;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    background: violet;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: Garamond, serif;
+}
+
+.btn:hover {
+    background: #b300b3;
+}
+
+/* Organizer */
+.organizer {
+    text-align: left;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    font-family: Garamond, serif;
+}

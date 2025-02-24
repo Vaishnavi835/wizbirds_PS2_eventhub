@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="title">Event Management System</h1>
+        <div class="top-right">
+            <button class="btn login-btn" onclick="location.href='login.html'">Login</button>
+            <button class="btn bookings-btn" onclick="location.href='bookings.html'">My Bookings</button>
+        </div>
+    </header>
+    
+    <nav>
+        <ul class="nav-links">
+            <li><a href="shows.html">Shows</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="movies.html">Movies</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div id="upcoming-events" class="upcoming-events" style="display: none;"></div>
+        
+        <section class="suggestions">
+            <h1>Suggested Movies</h1>
+            <div class="scroll-container" id="movies-container">
+                <div class="movie-item"><img src="white.jpg" width="100px" alt="Movie 1"><p>Movie Title 1 - March 5, 2025</p></div>
+                <div class="movie-item"><img src="white.jpg" width="100px"alt="Movie 2"><p>Movie Title 2 - April 10, 2025</p></div>
+                <div class="movie-item"><img src="white.jpg" width="100px" alt="Movie 3"><p>Movie Title 3 - May 15, 2025</p></div>
+            </div>
+            <button class="scroll-btn" onclick="scrollRight('movies-container')">&#9654;</button>
+        </section>
+        
+        <section class="suggestions">
+            <h1>Suggested Shows</h1>
+            <div class="scroll-container" id="shows-container">
+                <div class="show-item"><img src="white.jpg" width="100px" alt="Show 1"><p>Show Title 1 - March 8, 2025</p></div>
+                <div class="show-item"><img src="white.jpg" width="100px" alt="Show 2"><p>Show Title 2 - April 12, 2025</p></div>
+                <div class="show-item"><img src="white.jpg" width="100px" alt="Show 3"><p>Show Title 3 - May 20, 2025</p></div>
+            </div>
+            <button class="scroll-btn" onclick="scrollRight('shows-container')">&#9654;</button>
+        </section>
+        
+        <section class="suggestions">
+            <h1>Suggested Events</h1>
+            <div class="scroll-container" id="events-container">
+                <div class="event-item"><img src="white.jpg" width="100px" alt="Event 1"><p>Event Title 1 - March 15, 2025</p></div>
+                <div class="event-item"><img src="white.jpg" width="100px" alt="Event 2"><p>Event Title 2 - April 18, 2025</p></div>
+                <div class="event-item"><img src="white.jpg" width="100px" alt="Event 3"><p>Event Title 3 - June 5, 2025</p></div>
+            </div>
+            <button class="scroll-btn" onclick="scrollRight('events-container')">&#9654;</button>
+        </section>
+    </main>
+    
+    <footer>
+        <h2>Contact for any technical queries.</h2>
+        <p>Email: support@example.com</p>
+        <div class="social-icons">
+            <a href="#"><img src="facebook-icon.png"  alt="Facebook"></a>
+            <a href="#"><img src="twitter.png"  alt="Twitter"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const upcomingEvents = document.getElementById("upcoming-events");
+            const events = ["Concert - March 10, 2025", "Theater Play - April 5, 2025"];
+            if (events.length > 0) {
+                upcomingEvents.style.display = "block";
+                upcomingEvents.textContent = "Upcoming Events: " + events.join(", ");
+            }
+        });
+        
+        function scrollRight(containerId) {
+            document.getElementById(containerId).scrollBy({ left: 300, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
